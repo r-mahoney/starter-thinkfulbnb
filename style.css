@@ -58,7 +58,18 @@ header {
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
+  display: flex;
+  justify-content: center;
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
@@ -79,13 +90,33 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form .item {
+  display: flex;
+  flex-direction: row;
+}
+
 form label {
+  display: flex;
+  flex-direction: row;
   font-weight: bold;
 }
 
@@ -104,6 +135,11 @@ form button {
   width: 100%;
 }
 
+/* -------  images ------- */
+.about img, #ideas img, .host img {
+  width: 100%;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +153,103 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+  }
+
+  .about h2, .ideas h2 {
+    margin: 0;
+  }
+
+  #about h2, #ideas h2 {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5px;
+  }
+
+  form input, form select {
+    width: calc(100% - 10px);
+    font-size: 10px;
+    margin: 0;
+    flex: 1;
+  }
+
+  label {
+    font-size: 10px;
+  }
+  .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .form .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .row-1, .row-2 {
+    display: flex;
+  }
+  
+  .host, .host img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .host h2 {
+    font-size: 20px;
+  }
+
+  .host p {
+    font-size: 9.5px;
+  }
+
+  .host ul {
+    font-size: 9.5px;
+    padding: 5 0 0 25px;
+  }
+
+  form button {
+    flex: .5;
+    font-size: 15px;
+    padding: 5px;
+  }
+}
