@@ -195,20 +195,17 @@ footer p {
 
   form input, form select {
     width: calc(100% - 10px);
-    font-size: 10px;
+    font-size: calc(6px + 0.390625vw);
     margin: 0;
-    flex: 1;
   }
 
   label {
     font-size: 10px;
   }
+
   .form {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
     overflow: hidden;
   }
 
